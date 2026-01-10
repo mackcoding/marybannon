@@ -48,7 +48,8 @@ The GitHub Actions workflow (`deploy.yml`) handles everything automatically:
 ├── scripts/                    # Build tools
 │   ├── indexer.go             # Photo gallery generator
 │   └── go.mod                 # Go module file
-├── generate_description_gemini.ps1 # AI description generator
+├── generate_description_gemini.ps1 # AI description generator (Windows/PowerShell)
+├── generate_description_gemini.sh  # AI description generator (Linux/macOS)
 └── README.md                  # This file
 ```
 
@@ -76,23 +77,52 @@ To create your own memorial website:
 
 ## 🖼️ Generating Descriptions with AI
 
-This project includes a PowerShell script, `generate_description_gemini.ps1`, to automatically generate photo descriptions using AI.
+This project includes scripts to automatically generate photo descriptions using AI. Choose the script for your operating system:
+- **Windows**: `generate_description_gemini.ps1` (PowerShell)
+- **Linux/macOS**: `generate_description_gemini.sh` (Bash)
 
 ### Requirements
 
--   The [Google Gemini CLI](https://github.com/google/gemini-cli). Make sure it's installed and authenticated.
+- The [Google Gemini CLI](https://github.com/google/gemini-cli) - Make sure it's installed and authenticated
+- **Linux/macOS only**: `jq` for JSON processing
+  - CachyOS/Arch: `sudo pacman -S jq`
+  - Ubuntu/Debian: `sudo apt install jq`
+  - macOS: `brew install jq`
 
 ### How to Use
 
-1.  Place your new photos in the `web/photos/` directory.
-2.  Open a PowerShell terminal at the root of the project.
-3.  Run the script:
-    ```powershell
-    .\generate_description_gemini.ps1
-    ```
-4.  The script will find photos without descriptions, call the Gemini API to generate them, and save them to `web/photos/description.json`.
+#### Windows (PowerShell)
 
-You can customize the prompt inside the script by editing the `$PromptTemplate` variable.
+1. Place your new photos in the `web/photos/` directory
+2. Open a PowerShell terminal at the root of the project
+3. Run the script:
+   ```powershell
+   .\generate_description_gemini.ps1
+   ```
+
+#### Linux/macOS (Bash)
+
+1. Place your new photos in the `web/photos/` directory
+2. Open a terminal at the root of the project
+3. Make sure the script is executable (first time only):
+   ```bash
+   chmod +x generate_description_gemini.sh
+   ```
+4. Run the script:
+   ```bash
+   ./generate_description_gemini.sh
+   ```
+
+### How It Works
+
+The script will:
+1. Find all photos in `web/photos/` that don't have descriptions yet
+2. Call the Gemini API to generate heartwarming descriptions for each photo
+3. Incrementally save descriptions to `web/photos/description.json` after each success
+4. Retry failed photos with rate limit handling
+5. Save any permanently failed photos to `failed_photos.txt` for manual review
+
+You can customize the prompt inside the script by editing the `PROMPT_TEMPLATE` variable (PowerShell) or `PROMPT_TEMPLATE` constant (Bash).
 
 ## 📝 License & Reuse
 
