@@ -1,12 +1,6 @@
-# Elliott Memorial Website
+# Mary Bannon Memorial Website
 
-This is a GitHub-hosted memorial website for the bestest boy, Elliott.
-
-## 🐕 About Elliott
-
-Elliott was more than just a pet - he was a faithful companion, a bossy dog who often became the alpha in every situation. He was always gentle, kind, and loving, with a passion for toy ducks, chasing cats, swimming, camping, ice cream, car rides, and watching TV.
-
-Elliott passed away peacefully on October 8, 2025, at around 12 years old, and this website serves as a digital memorial to celebrate his life and preserve precious memories.
+This is a GitHub-hosted memorial website for Mary Bannon, hosted at marybannon.com.
 
 ## 🏗️ How It Works
 
@@ -110,7 +104,7 @@ This project is shared with love in hopes that it can help others create beautif
 
 This project, including this README, was created with the assistance of AI. We welcome contributions and feedback!
 
--   **Showcase Your Memorial**: If you use this template, we would be delighted to see it. Please [create a GitHub issue](https://github.com/mackcoding/elliottmemorial/issues/new) to share a link to your project!
+-   **Showcase Your Memorial**: If you use this template, we would be delighted to see it. Please [create a GitHub issue](https://github.com/mackcoding/marybannon/issues/new) to share a link to your project!
 -   **Contribute Changes**: Fixes and improvements are always welcome! Please feel free to submit a Pull Request with a detailed description of your changes.
 
 ## 🛠️ Technical Requirements
@@ -121,8 +115,4 @@ This project, including this README, was created with the assistance of AI. We w
 
 ## 💝 In Memory
 
-Elliott - Forever in our hearts and memories. A life well-lived, a love well-shared.
-
----
-
-*"Until one has loved an animal, a part of one's soul remains unawakened." - Anatole France*
+Mary Bannon - Forever in our hearts and memories. A life well-lived, a love well-shared.
