@@ -12,7 +12,7 @@ set -e
 
 # --- Configuration ---
 OUTPUT_FILE="description.json"
-PROMPT_TEMPLATE="Describe this photo of Mary Bannon in 1-2 sentences. Make it heartwarming and respectful. Return ONLY the description text, no extra formatting or explanations."
+PROMPT_TEMPLATE="Describe this photo of Mary Bannon in 1-2 sentences. Make it heartwarming and respectful. Make it generic, don't use phrases like \"this man\", don't user her full name, just a light hearted description. Return ONLY the description text, keep it 1-2 sentences, no extra formatting or explanations."
 MAX_RETRIES=3
 RETRY_DELAY=5
 RATE_LIMIT_DELAY=60

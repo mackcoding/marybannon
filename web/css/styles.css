@@ -91,6 +91,7 @@ body {
     height: 300px;
     object-fit: contain;
     background-color: #1a1a1a;
+    cursor: pointer;
 }
 .bg-dark-section {
     background-color: #0d1117;
